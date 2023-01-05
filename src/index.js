@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose  = require("mongoose");
 const {admin} = require('./Controller/admin')
-// const route = require("./routes/route.js");
+const route = require("./routes/route.js");
 const app = express();
 
 
@@ -23,7 +23,7 @@ mongoose
     .catch((err) => console.log(err));
     flag = false
 // Initial route
-// app.use("/", route);
+app.use("/", route);
 
 // port
 app.listen(process.env.PORT || 3000, function () {

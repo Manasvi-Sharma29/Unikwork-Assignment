@@ -127,3 +127,4 @@ const login = async function (req, res) {
     }
   };
   
+module.exports = {createUser}
