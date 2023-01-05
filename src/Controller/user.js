@@ -113,7 +113,7 @@ const login = async function (req, res) {
           userId: user._id.toString(),
           role: user.role,
         },
-        "order-management/we45@#%",
+        "e-commerce/7645%/we45@#%",
         { expiresIn: "24h" }
       );
       res.header("x-api-key", token);
