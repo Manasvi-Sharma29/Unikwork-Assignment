@@ -14,4 +14,26 @@ const isValidPhone = function(phone){
     return /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/.test(pass);
   };
 
-  module.exports = {isValidEmail,isValidName,isValidPassword,isValidPhone}
+  const isValidRequest = function(data){
+    if(Object.keys(data).length == 0){
+      return false
+    }
+    return true
+  }
+
+  const isValidString = function (value) {
+    if (!value) return false;
+    if (typeof value === "undefined" || value === null) return false;
+    if (value.length === 0) return false;
+    if (typeof value === "string" && value.trim().length === 0) return false;
+    else if (typeof value === "string") return true;
+  };
+  
+  const isValidTitle = function(name){
+    return /^([A-Za-z0-9 -.!?\:'()$]{2,70})+$/.test(name)
+  }
+  
+  const isValidPrice = function(rating){
+    return  /^([0-9]+\.?[0-9]*)$/.test(rating); 
+  };
+  module.exports = {isValidEmail,isValidName,isValidPassword,isValidPhone,isValidRequest,isValidString, isValidTitle,isValidPrice}
